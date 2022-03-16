@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Keeper</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        main.card {
+            max-height: 75%;
+            max-width: 550px;
+            margin: 2rem auto;
+        }
+
+        p#points {
+            font-size: 3rem;
+        }
+
+        div.card-footer-item {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 0.15rem;
+        }
+
+        div.card-footer-item:hover {
+            cursor: pointer;
+        }
+
+        div.card-footer-item:active {
+            opacity: 0.7;
+        }
+
+        div.p1 {
+            background-color: hsl(171, 100%, 41%);
+        }
+
+        div.p2 {
+            background-color: hsl(204, 86%, 53%);
+        }
+
+        div.reset {
+            background-color: hsl(348, 100%, 61%);
+        }
+
+        #dropdown {
+            width: 70px;
+            height: 35px;
+            font-size: 1.25rem;
+            text-align: center;
+            vertical-align: middle;
+            margin-top: -15px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div>
+            <figure class="image is-16by9">
+                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80" alt="">
+            </figure>
+        </div>
+
+        <div class="card-header">
+            <div class="card-header-title">Ping Pong Score Keeper</div>
+        </div>
+
+        <div class="card-content">
+            <div class="content">
+                <p class="title" id="points" style="margin: 1.1rem auto; padding: 0;">
+                    <span id="p1Point">0</span> to <span id="p2Point">0</span>
+                </p>
+
+                <p class="subtitle" >
+                    Use the buttons below to keep score
+                </p>
+
+                <span class="title" >Playing To</span>
+                <select name="dropdown" id="dropdown">
+
+                </select>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="card-footer-item p1">+1 Player One</div>
+            <div class="card-footer-item p2">+1 Player Two</div>
+            <div class="card-footer-item reset">Reset</div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
